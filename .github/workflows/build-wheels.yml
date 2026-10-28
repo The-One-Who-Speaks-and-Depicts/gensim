@@ -97,11 +97,7 @@ jobs:
       #
       # We want to make sure our wheels run against older Numpy versions
       #
-      #
-      # oldest-supported-numpy has no Python 3.14 mapping yet.
-      #
       - name: Install oldest-supported-numpy
-        if: ${{ matrix.python != '3.14' }}
         run: python -m pip install oldest-supported-numpy
 
       #
