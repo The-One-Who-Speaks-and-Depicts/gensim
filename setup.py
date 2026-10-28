@@ -40,7 +40,6 @@ cpp_extensions = OrderedDict([
 
 def need_cython():
     """Return True if we need Cython to translate any of the extensions."""
-    # Shipped C/C++ may be stale for newer Pythons, so prefer regenerating from .pyx.
     if find_spec("Cython") is not None:
         return True
     expected = list(c_extensions.values()) + list(cpp_extensions.values())
